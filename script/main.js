@@ -23,13 +23,13 @@ function calculMonnaie() {
     nbr5Euros = 0;
     nbr1Euro = 0;
 
-    totalSaisi = document.getElementById("total");
-    monnaieSaisi = document.getElementById("monnaie");
-    aRendre = totalSaisi -monnaieSaisi;
+    totalSaisi = document.getElementById("total").value;
+    monnaieSaisi = document.getElementById("monnaie").value;
+    aRendre = monnaieSaisi -  totalSaisi;
 
     while (aRendre >= 10) {
         nbr10Euros++;
-        aRendre = aRendre - 5;
+        aRendre = aRendre - 10;
     }
     if (aRendre >= 5) {
         nbr5Euros++;
